@@ -53,29 +53,6 @@ class element_page : Fragment() {
         var url_button : Button = view.findViewById(R.id.element_url_button)
 
 
-        /*
-
-        TODO : replace this part false search part with the result attached to it
-            from the preview search results list fragment
-        */
-        var indexor : Indexor = Indexor(view.context)
-        var search_result = indexor.Search("naruto")
-
-        title_textview.text = search_result.content.title;
-
-        desc_textview.text = search_result.content.desc;
-
-
-        Picasso.get().load(search_result.content.minia_url).into(minia_imgview)
-        url_button.setOnClickListener {
-             startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(search_result.content.url)))
-        }
-
-
-
-
-
-
 
 
     }

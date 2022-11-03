@@ -1,10 +1,14 @@
 package com.example.theindexor
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import java.util.Collections.emptyList
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +31,46 @@ class results_list : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        var recycler : RecyclerView = view.findViewById(R.id.results_list_recycler)
+
+        /*
+
+        TODO : remplacer par une barre de recherche dans le fragment precedent
+            puis prendre la query dans le bundle passe ici
+
+        */
+
+        val results : MutableList<Result> = Indexor(view.context).Search("naruto")
+
+
+
+
+        // this creates a vertical layout Manager
+        recycler.layoutManager = LinearLayoutManager(view.context)
+
+        // ArrayList of class ItemsViewModel
+        val data = ArrayList<ItemsViewModel>()
+
+        // This loop will create 20 Views containing
+        // the image with the count of view
+        for (result in results) {
+
+            // TODO : replace image with real miniature
+            data.add(ItemsViewModel(R.drawable.ic_launcher_foreground, result.getTitle(),result))
+        }
+
+        // This will pass the ArrayList to our Adapter
+        val adapter = CustomAdapter(data)
+
+        // Setting the Adapter with the recyclerview
+        recycler.adapter = adapter
+
     }
 
     override fun onCreateView(
