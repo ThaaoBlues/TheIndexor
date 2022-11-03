@@ -1,11 +1,21 @@
 {
   "kissmanga.nl" : {
 
-    "search_url" : "https://kissmanga.nl/search?q=",
+    "search_url" : "http://kissmanga.nl/search?q=",
     "title_class" : "manga-newest",
     "desc_class" : "description descripfix",
     "minia_url_class" : "media-object",
     "content_url_class" : "tooltips"
+  },
+
+  "comicextra.com" : {
+
+    "search_url" : "http://www.comicextra.com/comic-search?key=",
+    "title_class" : "h3",
+    "desc_class" : "description descripfix",
+    "minia_url_class" : "image",
+    "content_url_class" : "image"
   }
+
 
 }

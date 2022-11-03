@@ -46,11 +46,12 @@ class Indexor(argcontext : Context) {
     // called for each website present in database
     fun scrape_website(site_struct : JSONObject,query : String) : List<Result>{
 
+        val doc = Jsoup.connect(site_struct["search_url"].toString() + query)
+            .ignoreHttpErrors(true)
+            .get()
 
-
-        val doc = Jsoup.connect(site_struct["search_url"].toString() + query).get()
         val results_qtt = doc.select(site_struct["title_class"].toString()).size
-        val results : MutableList<Result> = mutableListOf()
+        val results: MutableList<Result> = mutableListOf()
 
 
         val titles = doc.select(site_struct["title_class"].toString())
@@ -58,7 +59,7 @@ class Indexor(argcontext : Context) {
         val minia_urls = doc.select(site_struct["minia_url_class"].toString())
         val content_urls = doc.select(site_struct["content_url_class"].toString())
 
-        for ( i in 0 until results_qtt){
+        for (i in 0 until results_qtt) {
             var r = Result()
             r.setTitle(titles.get(i).text())
             r.setDesc(descriptions.get(i).text())
@@ -66,8 +67,6 @@ class Indexor(argcontext : Context) {
             r.setUrl(content_urls.get(i).attr("href").toString())
             results.add(r)
         }
-
-
         return results
     }
 
