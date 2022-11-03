@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
             val manager = supportFragmentManager
             val transaction = manager.beginTransaction()
-            transaction.replace(R.id.content_main_activity,element_page())
+            transaction.replace(R.id.content_main_activity,results_list())
             transaction.commit()
         }
 

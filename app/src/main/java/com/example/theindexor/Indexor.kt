@@ -21,7 +21,7 @@ class Indexor(argcontext : Context) {
 
         val response = client.newCall(request).execute()
 
-        var json = JSONObject(response.body().toString())
+        var json = JSONObject(response.body()?.string() ?: "{}")
 
         var results : MutableList<com.example.theindexor.Result> = mutableListOf()
 
