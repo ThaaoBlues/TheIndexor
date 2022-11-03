@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_fragment">
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.theindexor.main_fragment"
+        android:label="fragment_main_fragment"
+        tools:layout="@layout/fragment_main_fragment" >
+        <action
+            android:id="@+id/action_main_fragment_to_element_page"
+            app:destination="@id/element_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/element_page"
+        android:name="com.example.theindexor.element_page"
+        android:label="fragment_element_page"
+        tools:layout="@layout/fragment_element_page" />
+</navigation>

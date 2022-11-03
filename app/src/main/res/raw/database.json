@@ -1,0 +1,10 @@
+{
+  "kissmanga.nl" : {
+
+    "search_url" : "http://kissmanga.nl/search?q=",
+    "title_class" : "manga-newest",
+    "desc_class" : "description descripfix",
+    "minia_url_class" : "media-object"
+  }
+
+}
