@@ -2,20 +2,20 @@
   "kissmanga.nl" : {
 
     "search_url" : "http://kissmanga.nl/search?q=",
-    "title_class" : "h4",
-    "desc_class" : "description",
-    "minia_url_class" : "media-object",
-    "content_url_class" : "tooltips",
+    "title_css_selector" : "h4",
+    "desc_css_selector" : "description",
+    "minia_url_css_selector" : "media-object",
+    "content_url_css_selector" : "tooltips",
     "content_url_scheme" : "http://kissmanga.nl/manga/"
   },
 
   "comicextra.com" : {
 
     "search_url" : "http://www.comicextra.com/comic-search?key=",
-    "title_class" : "h3",
-    "desc_class" : "description descripfix",
-    "minia_url_class" : "image",
-    "content_url_class" : "image",
+    "title_css_selector" : "h3",
+    "desc_css_selector" : "description descripfix",
+    "minia_url_css_selector" : "image",
+    "content_url_css_selector" : "image",
     "content_url_scheme" : "http://www.comicextra.com/comic/"
   }
 
