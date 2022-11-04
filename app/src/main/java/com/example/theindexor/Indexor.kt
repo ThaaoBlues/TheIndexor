@@ -11,7 +11,7 @@ import kotlin.math.min
 class Indexor(argcontext : Context) {
 
     var context : Context = argcontext
-    fun Search(query : String): MutableList<Result>{
+    fun Search(query : String,category: String): MutableList<Result>{
 
 
 
@@ -24,20 +24,18 @@ class Indexor(argcontext : Context) {
 
         var json = JSONObject(response.body()?.string() ?: "{}")
 
-        var results : MutableList<com.example.theindexor.Result> = mutableListOf()
+        var results : MutableList<Result> = mutableListOf()
 
 
         //loop on each website from database.json
 
-        json.keys().forEach {
+
+        JSONObject(json[category].toString()).keys().forEach {
 
             scrape_website(JSONObject(json[it].toString()),query).forEach {
                 results.add(it)
             }
         }
-
-
-
 
 
         return results
@@ -56,7 +54,7 @@ class Indexor(argcontext : Context) {
         val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
         val content_urls = doc.select(site_struct["content_url_css_selector"].toString())
 
-
+        println(site_struct["content_url_css_selector"])
         val results: MutableList<Result> = mutableListOf()
 
 
