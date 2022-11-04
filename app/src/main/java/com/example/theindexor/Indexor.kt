@@ -5,6 +5,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.jsoup.Jsoup
+import kotlin.math.min
 
 
 class Indexor(argcontext : Context) {
@@ -53,20 +54,36 @@ class Indexor(argcontext : Context) {
         val results_qtt = doc.select(site_struct["title_class"].toString()).size
         val results: MutableList<Result> = mutableListOf()
 
-
         val titles = doc.select(site_struct["title_class"].toString())
         val descriptions = doc.select(site_struct["desc_class"].toString())
         val minia_urls = doc.select(site_struct["minia_url_class"].toString())
         val content_urls = doc.select(site_struct["content_url_class"].toString())
 
-        for (i in 0 until results_qtt) {
-            var r = Result()
-            r.setTitle(titles.get(i).text())
-            r.setDesc(descriptions.get(i).text())
-            r.setMiniaUrl(minia_urls.get(i).attr("href").toString())
-            r.setUrl(content_urls.get(i).attr("href").toString())
-            results.add(r)
+        if (results_qtt > 0) {
+            for (i in 0 until results_qtt) {
+                var r = Result()
+
+                r.setTitle(titles[i].text())
+                if(i < descriptions.size){
+                    r.setDesc(descriptions[i].text())
+                }else{
+                    r.setDesc("scraping error, sorry :/")
+                }
+
+                if(i < minia_urls.size){
+                    r.setMiniaUrl(minia_urls[i].attr("href").toString())
+                }else{
+                    r.setMiniaUrl("scraping error, sorry :/")
+                }
+                if(i < content_urls.size){
+                    r.setUrl(content_urls[i].attr("href").toString())
+                }else{
+                    r.setUrl("scraping error, sorry :/")
+                }
+                results.add(r)
+            }
         }
+
         return results
     }
 
