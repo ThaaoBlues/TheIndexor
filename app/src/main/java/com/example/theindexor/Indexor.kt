@@ -51,7 +51,6 @@ class Indexor(argcontext : Context) {
             .ignoreHttpErrors(true)
             .get()
 
-
         val titles = doc.select(site_struct["title_css_selector"].toString())
         val descriptions = doc.select(site_struct["desc_css_selector"].toString())
         val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
