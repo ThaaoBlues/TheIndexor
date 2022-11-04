@@ -4,7 +4,7 @@
 
     "mangafreak.net" : {
       "search_url" : "https://w13.mangafreak.net/Search/%s/Genre/000000000000000000000000000000000000000000000000000/Status/0/Type/0",
-      "title_css_selector" : "h3",
+      "title_css_selector" : "a",
       "desc_css_selector" : "NO SELECTOR",
       "minia_url_css_selector" : "img",
       "content_url_css_selector" : "a",

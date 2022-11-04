@@ -56,7 +56,6 @@ class Indexor(argcontext : Context) {
         val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
         val content_urls = doc.select(site_struct["content_url_css_selector"].toString())
 
-        println(site_struct["content_url_css_selector"])
         val results: MutableList<Result> = mutableListOf()
 
 
