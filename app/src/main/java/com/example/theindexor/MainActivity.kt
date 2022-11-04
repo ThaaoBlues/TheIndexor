@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             val transaction = manager.beginTransaction()
             val b = Bundle()
             b.putString("query", search_bar.text.toString())
-            b.putString("type",category)
+            b.putString("category",category)
             var f = results_list()
             f.arguments = b
             transaction.replace(R.id.content_main_activity,f)

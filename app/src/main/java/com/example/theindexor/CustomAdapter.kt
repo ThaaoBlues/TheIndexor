@@ -6,10 +6,12 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings.PluginState
+import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
+
 
 class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
@@ -25,7 +27,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
     }
 
     // binds the list items to a view
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SetJavaScriptEnabled")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val ItemsViewModel = mList[position]
@@ -39,8 +41,10 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
 
         // for now, will just open website in browser
         holder.textView.setOnClickListener(){
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(ItemsViewModel.result.content.url))
+            val intent = Intent(holder.textView.context,Webview::class.java)
+            intent.putExtra("url",ItemsViewModel.result.content.url)
             holder.textView.context.startActivity(intent)
+
         }
 
     }

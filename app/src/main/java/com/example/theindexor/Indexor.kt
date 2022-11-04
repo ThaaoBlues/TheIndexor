@@ -29,9 +29,11 @@ class Indexor(argcontext : Context) {
 
         //loop on each website from database.json
 
+        // select categories
+        json = JSONObject(json[category].toString())
 
-        JSONObject(json[category].toString()).keys().forEach {
 
+        json.keys().forEach {
             scrape_website(JSONObject(json[it].toString()),query).forEach {
                 results.add(it)
             }
@@ -45,7 +47,7 @@ class Indexor(argcontext : Context) {
     // called for each website present in database
     fun scrape_website(site_struct : JSONObject,query : String) : List<Result>{
 
-        val doc = Jsoup.connect(site_struct["search_url"].toString() + query)
+        val doc = Jsoup.connect(site_struct["search_url"].toString().replace("%s",query))
             .ignoreHttpErrors(true)
             .get()
 

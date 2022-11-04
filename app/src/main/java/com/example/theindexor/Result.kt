@@ -10,6 +10,11 @@ class Result{
 
     open var content = ResultType("","","","");
 
+    fun download_and_unpack(){
+
+    }
+
+
     fun setDesc(arg: String){
         content.desc = arg;
     }

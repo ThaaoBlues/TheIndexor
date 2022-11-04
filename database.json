@@ -2,24 +2,55 @@
 
   "manga-comics" : {
 
+    "mangafreak.net" : {
+      "search_url" : "https://w13.mangafreak.net/Search/%s/Genre/000000000000000000000000000000000000000000000000000/Status/0/Type/0",
+      "title_css_selector" : "h3",
+      "desc_css_selector" : "NO SELECTOR",
+      "minia_url_css_selector" : "img",
+      "content_url_css_selector" : "a",
+      "content_url_scheme" : "/Manga/",
+      "dl_css_selector" : "a",
+      "dl_url_scheme" : "https://images.mangafreak.net/downloads/"
+
+    },
+
+    "w.mangairo.com" : {
+
+      "search_url" : "https://w.mangairo.com/list/search/%s",
+      "title_css_selector" : "h4",
+      "desc_css_selector" : "NO SELECTOR",
+      "minia_url_css_selector" : "img",
+      "content_url_css_selector" : "a",
+      "content_url_scheme" : "https://chap.mangairo.com/story-wp",
+      "dl_css_selector" : "NO SELECTOR",
+      "dl_url_scheme" : "NO SELECTOR"
+
+    },
+
     "kissmanga.nl" : {
 
-      "search_url" : "http://kissmanga.nl/search?q=",
+      "search_url" : "http://kissmanga.nl/search?q=%s",
       "title_css_selector" : "h4",
       "desc_css_selector" : ".description",
       "minia_url_css_selector" : ".media-object",
       "content_url_css_selector" : ".tooltips",
-      "content_url_scheme" : "http://kissmanga.nl/manga/"
+      "content_url_scheme" : "http://kissmanga.nl/manga/",
+      "dl_css_selector" : "NO SELECTOR",
+      "dl_url_scheme" : "NO SELECTOR"
+
     },
   
     "comicextra.com" : {
   
-      "search_url" : "http://www.comicextra.com/comic-search?key=",
+      "search_url" : "http://www.comicextra.com/comic-search?key=%s",
       "title_css_selector" : "h3",
       "desc_css_selector" : ".description",
       "minia_url_css_selector" : ".image",
       "content_url_css_selector" : ".image",
-      "content_url_scheme" : "http://www.comicextra.com/comic/"
+      "content_url_scheme" : "http://www.comicextra.com/comic/",
+      "dl_css_selector" : "NO SELECTOR",
+      "dl_url_scheme" : "NO SELECTOR"
+
     }
 
 
