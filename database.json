@@ -5,7 +5,8 @@
     "title_class" : "h4",
     "desc_class" : "description",
     "minia_url_class" : "media-object",
-    "content_url_class" : "tooltips"
+    "content_url_class" : "tooltips",
+    "content_url_scheme" : "http://kissmanga.nl/manga/"
   },
 
   "comicextra.com" : {
@@ -14,7 +15,8 @@
     "title_class" : "h3",
     "desc_class" : "description descripfix",
     "minia_url_class" : "image",
-    "content_url_class" : "image"
+    "content_url_class" : "image",
+    "content_url_scheme" : "http://www.comicextra.com/comic/"
   }
 
 

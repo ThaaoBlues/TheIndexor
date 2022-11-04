@@ -51,16 +51,18 @@ class Indexor(argcontext : Context) {
             .ignoreHttpErrors(true)
             .get()
 
-        val results_qtt = doc.select(site_struct["title_class"].toString()).size
+
+        val titles = doc.select(site_struct["title_css_selector"].toString())
+        val descriptions = doc.select(site_struct["desc_css_selector"].toString())
+        val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
+        val content_urls = doc.select(site_struct["content_url_css_selector"].toString())
+
+
         val results: MutableList<Result> = mutableListOf()
 
-        val titles = doc.select(site_struct["title_class"].toString())
-        val descriptions = doc.select(site_struct["desc_class"].toString())
-        val minia_urls = doc.select(site_struct["minia_url_class"].toString())
-        val content_urls = doc.select(site_struct["content_url_class"].toString())
 
-        if (results_qtt > 0) {
-            for (i in 0 until results_qtt) {
+        if (titles.size > 0) {
+            for (i in 0 until titles.size) {
                 var r = Result()
 
                 r.setTitle(titles[i].text())
@@ -75,7 +77,10 @@ class Indexor(argcontext : Context) {
                 }else{
                     r.setMiniaUrl("scraping error, sorry :/")
                 }
-                if(i < content_urls.size){
+                if((i < content_urls.size) &&
+                    (content_urls[i].attr("href").toString()
+                        .contains(site_struct["content_url_scheme"].toString()))){
+
                     r.setUrl(content_urls[i].attr("href").toString())
                 }else{
                     r.setUrl("scraping error, sorry :/")

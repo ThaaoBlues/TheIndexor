@@ -1,10 +1,14 @@
 package com.example.theindexor
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
@@ -16,10 +20,12 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_view_design, parent, false)
 
+
         return ViewHolder(view)
     }
 
     // binds the list items to a view
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val ItemsViewModel = mList[position]
@@ -28,7 +34,14 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         holder.imageView.setImageResource(ItemsViewModel.image)
 
         // sets the text to the textview from our itemHolder class
-        holder.textView.text = ItemsViewModel.text
+        holder.textView.text = ItemsViewModel.text + "("+ItemsViewModel.result.content.url+")"
+
+
+        // for now, will just open website in browser
+        holder.textView.setOnClickListener(){
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(ItemsViewModel.result.content.url))
+            holder.textView.context.startActivity(intent)
+        }
 
     }
 

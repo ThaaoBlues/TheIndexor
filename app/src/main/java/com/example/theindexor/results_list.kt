@@ -15,11 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "query"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [results_list.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class results_list : Fragment() {
     // TODO: Rename and change types of parameters
     private var query: String? = null
