@@ -76,20 +76,26 @@ class Indexor(argcontext : Context) {
         for(i in 0 until content_urls.size){
 
             // as we may shorten the array
-            if (i > content_urls.size){
+            if (i >= content_urls.size){
                 break
             }
 
             // now verify size and match
             val url = content_urls[i].attr("href").toString()
             val url_scheme = site_struct["content_url_scheme"].toString()
-            if (!url
-                .contains(url_scheme) ||
-                !(url.length > url_scheme.length)){
+            if (!url.contains(url_scheme)){
 
                 // remove this
                 content_urls.removeAt(i)
+                continue
             }
+            if(url.length <= url_scheme.length) {
+
+                // remove this
+                content_urls.removeAt(i)
+                continue
+            }
+
         }
 
         if (titles.size > 0) {

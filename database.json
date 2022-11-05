@@ -56,7 +56,7 @@
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : "https://french-stream.bet/film",
+        "content_url_scheme" : "https://french-stream.bet/film/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR"
   
@@ -68,7 +68,7 @@
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : "https://french-stream.bet/serie",
+        "content_url_scheme" : "https://french-stream.bet/serie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR"
   
