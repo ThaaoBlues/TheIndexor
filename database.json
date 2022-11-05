@@ -49,14 +49,26 @@
   
     "film-series" : {
 
-      "french-stream.bet" : {
+      "french-stream.bet-film" : {
     
         "search_url" : "https://french-stream.bet/?s=%s",
         "title_css_selector" : ".title",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : "https://french-stream.bet/",
+        "content_url_scheme" : "https://french-stream.bet/film",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR"
+  
+      },
+      "french-stream.bet-serie" : {
+    
+        "search_url" : "https://french-stream.bet/?s=%s",
+        "title_css_selector" : ".title",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "NO SELECTOR",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : "https://french-stream.bet/serie",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR"
   
