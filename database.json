@@ -8,7 +8,7 @@
       "title_css_selector" : ".story-name",
       "desc_css_selector" : "NO SELECTOR",
       "minia_url_css_selector" : "img",
-      "content_url_css_selector" : "a",
+      "content_url_css_selector" : ".story-list-img",
       "content_url_scheme" : "https://chap.mangairo.com/story-",
       "dl_css_selector" : "NO SELECTOR",
       "dl_url_scheme" : "NO SELECTOR"
