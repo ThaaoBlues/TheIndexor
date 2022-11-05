@@ -58,7 +58,6 @@ class Indexor(argcontext : Context) {
 
         val results: MutableList<Result> = mutableListOf()
 
-
         if (titles.size > 0) {
             for (i in 0 until titles.size) {
                 var r = Result()
