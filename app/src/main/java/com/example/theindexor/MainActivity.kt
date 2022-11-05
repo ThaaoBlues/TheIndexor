@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         list.add("manga-comics")
         list.add("anime")
+        list.add("film-series")
 
         var adapter : ArrayAdapter<String> = ArrayAdapter(spinner.context,android.R.layout.simple_spinner_item,list)
 
