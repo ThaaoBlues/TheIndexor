@@ -44,6 +44,15 @@ class Indexor(argcontext : Context) {
             }
         }
 
+        // add soap2day as we can't scrape it but the website is incredible
+
+        if (category == "film-series") {
+            var r : Result = Result()
+            r.setUrl("https://soapgate.org")
+            r.setTitle("Soap2day websites are one of the best platform but we can't scrape content on it yet. You can still try to see if your content is in here :)")
+            results.add(r)
+        }
+
 
         return results
     }
