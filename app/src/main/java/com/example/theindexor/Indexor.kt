@@ -5,6 +5,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.jsoup.Jsoup
+import java.util.*
 import kotlin.math.min
 
 
@@ -28,6 +29,11 @@ class Indexor(argcontext : Context) {
 
 
         //loop on each website from database.json
+
+        // select language
+        var lang : String = Locale.getDefault().toString().split("_")[0]
+        json = JSONObject(json[lang].toString())
+
 
         // select categories
         json = JSONObject(json[category].toString())
