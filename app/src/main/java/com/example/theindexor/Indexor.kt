@@ -34,7 +34,7 @@ class Indexor(argcontext : Context) {
         var lang : String = Locale.getDefault().toString().split("_")[0]
         json = JSONObject(json[lang].toString())
 
-
+        println(json.toString())
         // select categories
         json = JSONObject(json[category].toString())
 
