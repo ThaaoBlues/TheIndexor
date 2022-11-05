@@ -10,12 +10,21 @@
         android:label="fragment_main_fragment"
         tools:layout="@layout/fragment_main_fragment" >
         <action
-            android:id="@+id/action_main_fragment_to_element_page"
-            app:destination="@id/element_page" />
+            android:id="@+id/action_main_fragment_to_multi_parts_page2"
+            app:destination="@id/multi_parts_page" />
     </fragment>
     <fragment
-        android:id="@+id/element_page"
-        android:name="com.example.theindexor.element_page"
-        android:label="fragment_element_page"
-        tools:layout="@layout/fragment_element_page" />
+        android:id="@+id/multi_parts_page"
+        android:name="com.example.theindexor.multi_parts_page"
+        android:label="fragment_multi_parts_page"
+        tools:layout="@layout/fragment_multi_parts_page" >
+        <action
+            android:id="@+id/action_multi_parts_page_to_webview"
+            app:destination="@id/webview" />
+    </fragment>
+    <activity
+        android:id="@+id/webview"
+        android:name="com.example.theindexor.Webview"
+        android:label="activity_webview"
+        tools:layout="@layout/activity_webview" />
 </navigation>

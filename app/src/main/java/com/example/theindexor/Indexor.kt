@@ -34,7 +34,6 @@ class Indexor(argcontext : Context) {
         var lang : String = Locale.getDefault().toString().split("_")[0]
         json = JSONObject(json[lang].toString())
 
-        println(json.toString())
         // select categories
         json = JSONObject(json[category].toString())
 
@@ -84,7 +83,16 @@ class Indexor(argcontext : Context) {
                     (content_urls[i].attr("href").toString()
                         .contains(site_struct["content_url_scheme"].toString()))){
 
-                    r.setUrl(content_urls[i].attr("href").toString())
+                    // check if we didn't scrap a relative path
+                    var url = content_urls[i].attr("href").toString()
+                    if (!url.contains("http")){
+                        // get the domain name and add it http + content relative path
+                        url = "http://"+
+                                site_struct["search_url"].toString().split("/")[2]+ url
+                    }
+
+                    r.setUrl(url)
+
                 }else{
                     r.setUrl("scraping error, sorry :/")
                 }

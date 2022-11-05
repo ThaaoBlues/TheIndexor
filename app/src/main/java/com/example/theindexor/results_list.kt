@@ -40,6 +40,14 @@ class results_list : Fragment() {
         // effectue la recherche
         val results : MutableList<Result> = Indexor(view.context).Search(query.toString(),category.toString())
 
+        if (results.size == 0) {
+            // result object to say we didn't find anything
+            // but user can help us by updating our database
+            var r : com.example.theindexor.Result = Result()
+            r.setUrl("https://github.com/thaaoblues/TheIndexor")
+            r.setTitle("Oops, empty ! :/ You can help complete our database by clicking here :D")
+            results.add(r)
+        }
 
 
 
@@ -54,7 +62,7 @@ class results_list : Fragment() {
         for (result in results) {
 
             // TODO : replace image with real miniature
-            data.add(ItemsViewModel(R.drawable.ic_launcher_foreground, result.getTitle(),result))
+            data.add(ItemsViewModel(androidx.appcompat.R.drawable.abc_ic_go_search_api_material, result.getTitle(),result))
         }
 
         // This will pass the ArrayList to our Adapter

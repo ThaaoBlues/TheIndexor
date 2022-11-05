@@ -36,7 +36,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         holder.imageView.setImageResource(ItemsViewModel.image)
 
         // sets the text to the textview from our itemHolder class
-        holder.textView.text = ItemsViewModel.text + "("+ItemsViewModel.result.content.url+")"
+        holder.textView.text = ItemsViewModel.text + "\n-- link : ("+ItemsViewModel.result.content.url+") --"
 
 
         // for now, will just open website in browser
