@@ -47,7 +47,7 @@
 
   "film-series" : {
 
-    "comicextra.com" : {
+    "moviesjoys.cc" : {
   
       "search_url" : "https://moviesjoys.cc/searchs/?s=%s",
       "title_css_selector" : ".name",
