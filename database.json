@@ -48,6 +48,19 @@
   
   
     "film-series" : {
+
+      "french-stream.bet" : {
+    
+        "search_url" : "https://french-stream.bet/?s=%s",
+        "title_css_selector" : ".title",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "NO SELECTOR",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : "https://french-stream.bet/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR"
+  
+      },
   
       "moviesjoys.cc" : {
     
@@ -61,6 +74,8 @@
         "dl_url_scheme" : "NO SELECTOR"
   
       }
+
+
     },
   
     "anime" : {
