@@ -5,12 +5,13 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#393E46"
     tools:context=".main_fragment">
 
     <Button
         android:id="@+id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="126dp"
+        android:layout_height="61dp"
         android:layout_marginTop="292dp"
         android:text="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,11 +23,13 @@
         android:id="@+id/main_search_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="300dp"
         android:ems="10"
-        android:hint="Search here :)"
+        android:hint="A good movie/book ?"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,23 +38,36 @@
         style="@style/Widget.AppCompat.Spinner.DropDown"
         android:layout_width="210dp"
         android:layout_height="40dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/main_search_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="110dp"
         android:layout_height="40dp"
-        android:layout_marginTop="96dp"
-        android:capitalize="characters"
+        android:layout_marginTop="164dp"
         android:text="Category :"
         android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/fragment_main_spinner"
-        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

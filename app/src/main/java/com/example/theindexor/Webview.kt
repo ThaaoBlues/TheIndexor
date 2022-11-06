@@ -16,6 +16,7 @@ class Webview : AppCompatActivity() {
         setContentView(R.layout.activity_webview)
 
         var url = intent.getStringExtra("url").toString()
+        val website_root = url.split("/")[2]
 
         var webView = findViewById<WebView>(R.id.webView)
 
@@ -26,8 +27,11 @@ class Webview : AppCompatActivity() {
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
-                view.loadUrl(request.url.toString())
-                return false
+                // block all redirections outside website
+                if (request.url.toString().contains(website_root) ){
+                    view.loadUrl(url)
+                }
+                return true
             }
 
 

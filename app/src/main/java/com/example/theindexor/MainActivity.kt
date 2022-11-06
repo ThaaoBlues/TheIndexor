@@ -8,6 +8,9 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import com.example.theindexor.databinding.ActivityMainBinding
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,11 +56,24 @@ class MainActivity : AppCompatActivity() {
         // setup spinner
         var list : ArrayList<String> = ArrayList()
 
-        list.add("manga-comics")
-        list.add("anime")
-        list.add("film-series")
+        // get available categories from database
 
-        var adapter : ArrayAdapter<String> = ArrayAdapter(spinner.context,android.R.layout.simple_spinner_dropdown_item,list)
+        val request = Request.Builder().url("https://raw.githubusercontent.com/ThaaoBlues/TheIndexor/master/database.json").build();
+
+        val client = OkHttpClient()
+
+        val response = client.newCall(request).execute()
+
+        var json = JSONObject(response.body()?.string() ?: "{}")
+
+        // fr is just to select a language but we could take any
+        json = JSONObject(json["fr"].toString())
+
+        for (key in json.keys()) {
+            list.add(key.toString())
+        }
+
+        var adapter : ArrayAdapter<String> = ArrayAdapter(spinner.context,R.layout.custom_dropdow_item,list)
 
         spinner.adapter = adapter
 

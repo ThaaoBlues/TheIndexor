@@ -88,6 +88,8 @@
       }
 
 
+
+
     },
   
     "anime" : {
@@ -117,7 +119,33 @@
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR"
   
+      },
+      "web.swatchseries.ru-film" : {
+    
+        "search_url" : "https://web.swatchseries.ru/search?keyword=%s",
+        "title_css_selector" : ".title",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : ".poster",
+        "content_url_css_selector" : ".poster",
+        "content_url_scheme" : "/movie/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR"
+  
+      },
+      "web.swatchseries.ru-serie" : {
+    
+        "search_url" : "https://web.swatchseries.ru/search?keyword=%s",
+        "title_css_selector" : ".title",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : ".poster",
+        "content_url_css_selector" : ".poster",
+        "content_url_scheme" : "/series/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR"
+  
       }
+
+
 
     },
     "anime" : {
