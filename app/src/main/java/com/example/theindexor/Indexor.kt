@@ -5,8 +5,10 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.jsoup.Jsoup
+import org.jsoup.nodes.Element
 import java.util.*
 import kotlin.math.min
+import kotlin.reflect.typeOf
 
 
 class Indexor(argcontext : Context) {
@@ -68,35 +70,36 @@ class Indexor(argcontext : Context) {
         val titles = doc.select(site_struct["title_css_selector"].toString())
         val descriptions = doc.select(site_struct["desc_css_selector"].toString())
         val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
-        val content_urls = doc.select(site_struct["content_url_css_selector"].toString())
+        var content_urls : MutableList<String> = mutableListOf()
 
+        // filter all trash urls and duplicate results
+        val url_scheme = site_struct["content_url_scheme"].toString()
+        doc.select(site_struct["content_url_css_selector"].toString()).forEach {
+
+            val url = it.attr("href").toString()
+            // check url scheme and lenght
+            if (url.contains(url_scheme) && url.length > url_scheme.length){
+
+
+
+                // don't add  duplicates
+                if(content_urls.lastIndex != -1){
+                    if(content_urls[content_urls.lastIndex] != url){
+                        content_urls.add(url)
+
+                    }
+                }else{
+                    // first element
+                    content_urls.add(url)
+                }
+
+
+            }
+        }
+
+        // init results list
         val results: MutableList<Result> = mutableListOf()
 
-        // first, eliminate all bad links
-        for(i in 0 until content_urls.size){
-
-            // as we may shorten the array
-            if (i >= content_urls.size){
-                break
-            }
-
-            // now verify size and match
-            val url = content_urls[i].attr("href").toString()
-            val url_scheme = site_struct["content_url_scheme"].toString()
-            if (!url.contains(url_scheme)){
-
-                // remove this
-                content_urls.removeAt(i)
-                continue
-            }
-            if(url.length <= url_scheme.length) {
-
-                // remove this
-                content_urls.removeAt(i)
-                continue
-            }
-
-        }
 
         if (titles.size > 0) {
             for (i in 0 until titles.size) {
@@ -116,8 +119,10 @@ class Indexor(argcontext : Context) {
                 }
                 if(i < content_urls.size){
 
+                    var url = content_urls[i]
+
+
                     // check if we didn't scrap a relative path
-                    var url = content_urls[i].attr("href").toString()
                     if (!url.contains("http")){
                         // get the domain name and add it http + content relative path
                         url = "http://"+
