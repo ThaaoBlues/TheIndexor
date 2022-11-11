@@ -52,6 +52,7 @@ class Indexor(argcontext : Context) {
             var r : Result = Result()
             r.setUrl("https://soapgate.org")
             r.setTitle("Soap2day websites are one of the best platform but we can't scrape content on it yet. You can still try to see if your content is in here :)")
+            r.set_element_click("NO SELECTOR")
             results.add(r)
         }
 
@@ -134,6 +135,10 @@ class Indexor(argcontext : Context) {
                 }else{
                     r.setUrl("scraping error, sorry :/")
                 }
+
+                // add should click on element
+                r.set_element_click(site_struct["should_click_on_element"].toString())
+
                 results.add(r)
             }
         }

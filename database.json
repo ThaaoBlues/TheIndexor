@@ -13,7 +13,9 @@
         "content_url_css_selector" : ".bookmark_check",
         "content_url_scheme" : "https://chap.mangairo.com/story-",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       },
   
@@ -26,7 +28,9 @@
         "content_url_css_selector" : ".tooltips",
         "content_url_scheme" : "http://kissmanga.nl/manga/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       },
     
@@ -39,7 +43,9 @@
         "content_url_css_selector" : ".image",
         "content_url_scheme" : "http://www.comicextra.com/comic/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       }
   
@@ -58,7 +64,8 @@
         "content_url_css_selector" : "a",
         "content_url_scheme" : "https://french-stream.bet/film/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : ".cover"
   
       },
       "french-stream.bet-serie" : {
@@ -70,7 +77,8 @@
         "content_url_css_selector" : "a",
         "content_url_scheme" : "https://french-stream.bet/serie/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
   
       },
   
@@ -83,7 +91,9 @@
         "content_url_css_selector" : ".name",
         "content_url_scheme" : "/movie-watch/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       }
 

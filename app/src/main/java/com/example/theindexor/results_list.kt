@@ -45,6 +45,7 @@ class results_list : Fragment() {
         var r : com.example.theindexor.Result = Result()
         r.setUrl("https://github.com/thaaoblues/TheIndexor")
         r.setTitle("Oops, that's all ! :/ You can help complete our database by clicking here :D")
+        r.set_element_click("NO SELECTOR")
         results.add(r)
 
 
