@@ -95,6 +95,20 @@
         "should_click_on_element" : "NO SELECTOR"
 
   
+      },
+      "soap2day.sh" : {
+    
+        "search_url" : "https://secretlink.xyz/search/keyword/%s",
+        "title_css_selector" : "a",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "img",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : ".html",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
+  
       }
 
 
@@ -107,6 +121,21 @@
     },
   
     "papers" : {
+
+      "sci-hub-links.com" : {
+    
+        "search_url" : "https://sci-hub-links.com/scihub/?q=%s",
+        "title_css_selector" : ".gs-title",
+        "desc_css_selector" : ".gs-snippet",
+        "minia_url_css_selector" : ".poster",
+        "content_url_css_selector" : "NO SELECTOR",
+        "content_url_scheme" : "https://",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
+
+      }
   
     }
   },
@@ -154,6 +183,20 @@
         "minia_url_css_selector" : ".poster",
         "content_url_css_selector" : ".poster",
         "content_url_scheme" : "/series/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
+  
+      },
+      "soap2day.sh" : {
+    
+        "search_url" : "https://secretlink.xyz/search/keyword/%s",
+        "title_css_selector" : "a",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "img",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : ".html",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
         "should_click_on_element" : "NO SELECTOR"

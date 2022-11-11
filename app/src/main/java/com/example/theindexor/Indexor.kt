@@ -68,6 +68,13 @@ class Indexor(argcontext : Context) {
             .ignoreHttpErrors(true)
             .get()
 
+        var website_hostname = site_struct["search_url"].toString().split("/")[2]
+
+        // specific for soap2day as secretlink is only to search without recaptcha
+        if (site_struct["search_url"] == "https://secretlink.xyz/search/keyword/%s"){
+            website_hostname = "soap2day.sh"
+        }
+
         val titles = doc.select(site_struct["title_css_selector"].toString())
         val descriptions = doc.select(site_struct["desc_css_selector"].toString())
         val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
@@ -126,8 +133,7 @@ class Indexor(argcontext : Context) {
                     // check if we didn't scrap a relative path
                     if (!url.contains("http")){
                         // get the domain name and add it http + content relative path
-                        url = "http://"+
-                                site_struct["search_url"].toString().split("/")[2]+ url
+                        url = "http://$website_hostname/$url"
                     }
 
                     r.setUrl(url)
