@@ -65,7 +65,7 @@
         "content_url_scheme" : "https://french-stream.bet/film/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : ".cover"
+        "should_click_on_element" : "cover"
   
       },
       "french-stream.bet-serie" : {
@@ -127,7 +127,9 @@
         "content_url_css_selector" : ".name",
         "content_url_scheme" : "/movie-watch/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       },
       "web.swatchseries.ru-film" : {
@@ -139,7 +141,9 @@
         "content_url_css_selector" : ".poster",
         "content_url_scheme" : "/movie/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       },
       "web.swatchseries.ru-serie" : {
@@ -151,7 +155,9 @@
         "content_url_css_selector" : ".poster",
         "content_url_scheme" : "/series/",
         "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR"
+        "dl_url_scheme" : "NO SELECTOR",
+        "should_click_on_element" : "NO SELECTOR"
+
   
       }
 

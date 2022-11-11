@@ -65,7 +65,7 @@ class Webview : AppCompatActivity() {
 
                     // perform should_click_on_element while it is still here
                     webView.evaluateJavascript("document.getELementsByClassName(\"$should_click_on_element\")[0].click()",fun(s :String){})
-
+                    println("CLICKED ON ELEMENT : $should_click_on_element")
                     // check if we can extract a webview and its stream url to offer a better experience
 
 
