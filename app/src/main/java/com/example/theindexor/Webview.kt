@@ -31,6 +31,7 @@ class Webview : AppCompatActivity() {
         val webSettings: WebSettings = webView.getSettings()
         webSettings.javaScriptCanOpenWindowsAutomatically = false
         webSettings.setSupportMultipleWindows(false)
+        webSettings.javaScriptEnabled = true;
 
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
@@ -51,9 +52,10 @@ class Webview : AppCompatActivity() {
                     }
                 }
 
-                //println("refused : $req_url")
+                println("refused : $req_url")
 
                 return true
+                //return false
 
             }
 
@@ -63,8 +65,8 @@ class Webview : AppCompatActivity() {
                 // check if we are on the landing url
                 if (url == landing_url) {
 
-                    // perform should_click_on_element while it is still here
-                    webView.evaluateJavascript("document.getELementsByClassName(\"$should_click_on_element\")[0].click()",fun(s :String){})
+                    // perform should_click_on_element
+                    webView.evaluateJavascript("document.getElementsByClassName(\"$should_click_on_element\")[0].click()",fun(s:String){})
                     println("CLICKED ON ELEMENT : $should_click_on_element")
                     // check if we can extract a webview and its stream url to offer a better experience
 

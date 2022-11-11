@@ -78,7 +78,7 @@
         "content_url_scheme" : "https://french-stream.bet/serie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "should_click_on_element" : "cover"
   
       },
   
