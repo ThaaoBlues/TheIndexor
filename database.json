@@ -98,7 +98,7 @@
       },
       "soap2day.sh" : {
     
-        "search_url" : "https://secretlink.xyz/search/keyword/%s",
+        "search_url" : "https://soap2day.krd/search/keyword/%s",
         "title_css_selector" : "a",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
