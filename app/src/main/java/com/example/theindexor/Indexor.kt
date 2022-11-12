@@ -127,7 +127,7 @@ class Indexor(argcontext : Context) {
                 // check that it's the right pattern and not a "home" or "about" link
                 if(it.hasAttr("href")){
                     if(it.attr("href").contains(url_scheme)){
-                        titles.add(it.text())
+                        titles.add(it.text() + site_struct["title_css_selector"].toString())
                     }
 
                 }else{
