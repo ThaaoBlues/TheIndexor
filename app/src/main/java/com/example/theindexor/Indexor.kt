@@ -68,12 +68,8 @@ class Indexor(argcontext : Context) {
             .ignoreHttpErrors(true)
             .get()
 
-        var website_hostname = site_struct["search_url"].toString().split("/")[2]
+        val website_hostname = site_struct["search_url"].toString().split("/")[2]
 
-        // specific for soap2day as secretlink is only to search without recaptcha
-        if (site_struct["search_url"] == "https://secretlink.xyz/search/keyword/%s"){
-            website_hostname = "soap2day.sh"
-        }
 
         val titles = doc.select(site_struct["title_css_selector"].toString())
         val descriptions = doc.select(site_struct["desc_css_selector"].toString())
@@ -85,7 +81,7 @@ class Indexor(argcontext : Context) {
         doc.select(site_struct["content_url_css_selector"].toString()).forEach {
 
             val url = it.attr("href").toString()
-            // check url scheme and lenght
+            // check url scheme and length
             if (url.contains(url_scheme) && url.length > url_scheme.length){
 
 

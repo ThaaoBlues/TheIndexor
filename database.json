@@ -96,14 +96,28 @@
 
   
       },
-      "soap2day.sh" : {
+      "soap2day.sh-serie" : {
     
         "search_url" : "https://soap2day.krd/search/keyword/%s",
         "title_css_selector" : "a",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : ".html",
+        "content_url_scheme" : "/tv/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
+
+  
+      },
+      "soap2day.sh-film" : {
+    
+        "search_url" : "https://soap2day.krd/search/keyword/%s",
+        "title_css_selector" : "a",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "img",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : "/movie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
         "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
