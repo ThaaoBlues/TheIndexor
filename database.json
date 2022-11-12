@@ -85,7 +85,7 @@
       "soap2day.sh-serie" : {
     
         "search_url" : "https://secretlink.xyz/search/keyword/%s",
-        "title_css_selector" : "h5",
+        "title_css_selector" : "a",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",
@@ -99,7 +99,7 @@
       "soap2day.sh-film" : {
     
         "search_url" : "https://secretlink.xyz/search/keyword/%s",
-        "title_css_selector" : "h5",
+        "title_css_selector" : "a",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",

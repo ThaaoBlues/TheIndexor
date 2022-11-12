@@ -80,7 +80,22 @@ class Indexor(argcontext : Context) {
         val url_scheme = site_struct["content_url_scheme"].toString()
         doc.select(site_struct["content_url_css_selector"].toString()).forEach {
 
-            val url = it.attr("href").toString()
+            var url = it.attr("href").toString()
+
+
+            // check if we didn't scrap a relative path
+            if (!url.contains("http")){
+
+                // get the domain name and add it http + content relative path
+                if( url.startsWith("/")){
+                    url = "http://$website_hostname$url"
+                }else{
+                    url = "http://$website_hostname/$url"
+
+                }
+
+            }
+
             // check url scheme and length
             if (url.contains(url_scheme) && url.length > url_scheme.length){
 
@@ -144,16 +159,7 @@ class Indexor(argcontext : Context) {
                 }
                 if(i < content_urls.size){
 
-                    var url = content_urls[i]
-
-
-                    // check if we didn't scrap a relative path
-                    if (!url.contains("http")){
-                        // get the domain name and add it http + content relative path
-                        url = "http://$website_hostname/$url"
-                    }
-
-                    r.setUrl(url)
+                    r.setUrl(content_urls[i])
 
                 }else{
                     continue // as without link displaying the result is useless
