@@ -71,7 +71,7 @@
       "french-stream.bet-serie" : {
     
         "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : "a[href~=\"/serie/\"]",
+        "title_css_selector" : ".tilte",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
         "content_url_css_selector" : "a",
