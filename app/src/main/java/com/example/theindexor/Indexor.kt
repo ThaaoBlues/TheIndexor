@@ -135,7 +135,7 @@ class Indexor(argcontext : Context) {
                     r.setUrl(url)
 
                 }else{
-                    r.setUrl("scraping error, sorry :/")
+                    continue // as without link displaying the result is useless
                 }
 
                 // add should click on element
