@@ -112,7 +112,7 @@
       },
       "soap2day.sh-film" : {
     
-        "search_url" : "https://soap2day.krd/search/keyword/%s",
+        "search_url" : "https://soap2day.krd/search/%s",
         "title_css_selector" : "a",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
