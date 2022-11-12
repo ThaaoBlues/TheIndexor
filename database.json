@@ -58,10 +58,10 @@
       "french-stream.bet-film" : {
     
         "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : "a[href~='/film/']",
+        "title_css_selector" : ".title",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
-        "content_url_css_selector" : "a[href$='/']",
+        "content_url_css_selector" : "a[href~=\"/film/\"]",
         "content_url_scheme" : "https://french-stream.bet/film/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
@@ -71,10 +71,10 @@
       "french-stream.bet-serie" : {
     
         "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : "a[href~='/serie/']",
+        "title_css_selector" : ".title",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
-        "content_url_css_selector" : "a[href$='/']",
+        "content_url_css_selector" : "a[href~=\"/serie/\"]",
         "content_url_scheme" : "https://french-stream.bet/serie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
@@ -85,7 +85,7 @@
       "soap2day.sh-serie" : {
     
         "search_url" : "https://secretlink.xyz/search/keyword/%s",
-        "title_css_selector" : "a[href~='.html']",
+        "title_css_selector" : "a[href~=\".html\"]",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",
@@ -99,7 +99,7 @@
       "soap2day.sh-film" : {
     
         "search_url" : "https://secretlink.xyz/search/keyword/%s",
-        "title_css_selector" : "a[href~='.html']",
+        "title_css_selector" : "a[href~=\".html\"]",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",
