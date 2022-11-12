@@ -23,7 +23,7 @@ class Webview : AppCompatActivity() {
 
 
         var landing_url = intent.getStringExtra("url").toString()
-        val should_click_on_element = intent.getStringExtra("should_click_on_element").toString()
+        val script = intent.getStringExtra("script").toString()
         val website_root = landing_url.split("/")[2]
 
         var webView = findViewById<WebView>(R.id.webView)
@@ -66,20 +66,7 @@ class Webview : AppCompatActivity() {
                 if (url == landing_url) {
 
                     // perform should_click_on_element
-                    webView.evaluateJavascript("document.getElementsByClassName(\"$should_click_on_element\")[0].click()",fun(s:String){})
-                    println("CLICKED ON ELEMENT : $should_click_on_element")
-                    // check if we can extract a webview and its stream url to offer a better experience
-
-
-                    //iframe tag search
-                    webView.evaluateJavascript("document.getElementsByTagName(\"iframe\")[0].src",
-                        fun(s: String) {
-                            if (s != "null") {
-                                webView.loadUrl(s)
-                            }
-                        })
-
-                    //video tag search
+                    webView.evaluateJavascript("$script",fun(s:String){})
 
                 }
 

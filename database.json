@@ -14,7 +14,7 @@
         "content_url_scheme" : "https://chap.mangairo.com/story-",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       },
@@ -29,7 +29,7 @@
         "content_url_scheme" : "http://kissmanga.nl/manga/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       },
@@ -44,7 +44,7 @@
         "content_url_scheme" : "http://www.comicextra.com/comic/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       }
@@ -65,7 +65,7 @@
         "content_url_scheme" : "https://french-stream.bet/film/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "cover"
+        "script" : "document.getElementsByClassName(\"cover\")[0].click();document.location.href = document.getElementsByTagName(\"iframe\")[0].src"
   
       },
       "french-stream.bet-serie" : {
@@ -78,7 +78,7 @@
         "content_url_scheme" : "https://french-stream.bet/serie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "cover"
+        "script" : "cover"
   
       },
   
@@ -92,7 +92,7 @@
         "content_url_scheme" : "/movie-watch/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       },
@@ -106,7 +106,7 @@
         "content_url_scheme" : ".html",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       }
@@ -132,7 +132,7 @@
         "content_url_scheme" : "https://",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
 
       }
@@ -157,7 +157,7 @@
         "content_url_scheme" : "/movie-watch/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       },
@@ -171,7 +171,7 @@
         "content_url_scheme" : "/movie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       },
@@ -185,7 +185,7 @@
         "content_url_scheme" : "/series/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       },
@@ -199,7 +199,7 @@
         "content_url_scheme" : ".html",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "should_click_on_element" : "NO SELECTOR"
+        "script" : "NO SELECTOR"
 
   
       }

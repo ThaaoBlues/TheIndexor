@@ -43,7 +43,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         holder.textView.setOnClickListener(){
             val intent = Intent(holder.textView.context,Webview::class.java)
             intent.putExtra("url",ItemsViewModel.result.content.url)
-            intent.putExtra("should_click_on_element",ItemsViewModel.result.content.should_click_on_element)
+            intent.putExtra("script",ItemsViewModel.result.content.script)
             holder.textView.context.startActivity(intent)
 
         }

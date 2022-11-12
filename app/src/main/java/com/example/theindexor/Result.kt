@@ -6,7 +6,7 @@ class Result{
     data class ResultType(var desc : String,
                           var url : String,
                           var minia_url : String,
-                          var title : String,var should_click_on_element : String)
+                          var title : String,var script : String)
 
     open var content = ResultType("","","","","");
 
@@ -28,12 +28,12 @@ class Result{
         content.title = arg;
     }
 
-    fun set_element_click(arg : String){
-        content.should_click_on_element = arg;
+    fun setScript(arg : String){
+        content.script = arg;
     }
 
-    fun get_element_click() : String{
-        return content.should_click_on_element
+    fun getScript() : String{
+        return content.script
     }
 
     fun getDesc(): String {
