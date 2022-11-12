@@ -78,7 +78,7 @@
         "content_url_scheme" : "https://french-stream.bet/serie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "script" : "cover"
+        "script" : "document.getElementsByClassName(\"cover\")[0].click();window.location.href = document.getElementsByTagName(\"iframe\")[0].src"
   
       },
   
@@ -106,7 +106,7 @@
         "content_url_scheme" : ".html",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "script" : "NO SELECTOR"
+        "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
 
   
       }

@@ -65,7 +65,7 @@ class Webview : AppCompatActivity() {
                 // check if we are on the landing url
                 if (url == landing_url) {
 
-                    // perform should_click_on_element
+                    // inject custom javascript
                     webView.evaluateJavascript("$script",fun(s:String){})
 
                 }
