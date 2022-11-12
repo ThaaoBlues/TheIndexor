@@ -87,10 +87,10 @@ class Indexor(argcontext : Context) {
             if (!url.contains("http")){
 
                 // get the domain name and add it http + content relative path
-                if( url.startsWith("/")){
-                    url = "http://$website_hostname$url"
+                url = if( url.startsWith("/")){
+                    "http://$website_hostname$url"
                 }else{
-                    url = "http://$website_hostname/$url"
+                    "http://$website_hostname/$url"
 
                 }
 
