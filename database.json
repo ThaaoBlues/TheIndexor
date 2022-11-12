@@ -84,12 +84,12 @@
   
       "soap2day.sh-serie" : {
     
-        "search_url" : "https://soap2day.krd/search/keyword/%s",
-        "title_css_selector" : "a",
+        "search_url" : "https://secretlink.xyz/search/keyword/%s",
+        "title_css_selector" : "h5",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
-        "content_url_css_selector" : "a[title]",
-        "content_url_scheme" : "https://soap2day.krd/tv/",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : "https://secretlink.xyz/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
         "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
@@ -98,12 +98,12 @@
       },
       "soap2day.sh-film" : {
     
-        "search_url" : "https://soap2day.krd/search/%s",
-        "title_css_selector" : "a",
+        "search_url" : "https://secretlink.xyz/search/keyword/%s",
+        "title_css_selector" : "h5",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
-        "content_url_css_selector" : "a[title]",
-        "content_url_scheme" : "https://soap2day.krd/movie/",
+        "content_url_css_selector" : "a",
+        "content_url_scheme" : "https://secretlink.xyz/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
         "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"

@@ -71,7 +71,7 @@ class Indexor(argcontext : Context) {
         val website_hostname = site_struct["search_url"].toString().split("/")[2]
 
 
-        val titles = doc.select(site_struct["title_css_selector"].toString())
+        var titles : MutableList<String> = mutableListOf()
         val descriptions = doc.select(site_struct["desc_css_selector"].toString())
         val minia_urls = doc.select(site_struct["minia_url_css_selector"].toString())
         var content_urls : MutableList<String> = mutableListOf()
@@ -101,6 +101,27 @@ class Indexor(argcontext : Context) {
             }
         }
 
+
+        // filters all trash titles
+
+        doc.select(site_struct["title_css_selector"].toString()).forEach {
+
+            if (it.text() != ""){
+
+                // if title is as a link,
+                // check that it's the right pattern and not a "home" or "about" link
+                if(it.hasAttr("href")){
+                    if(it.attr("href").contains(url_scheme)){
+                        titles.add(it.text())
+                    }
+
+                }else{
+                    titles.add(it.text())
+                }
+            }
+        }
+
+
         // init results list
         val results: MutableList<Result> = mutableListOf()
 
@@ -109,7 +130,7 @@ class Indexor(argcontext : Context) {
             for (i in 0 until titles.size) {
                 var r = Result()
 
-                r.setTitle(titles[i].text())
+                r.setTitle(titles[i])
                 if(i < descriptions.size){
                     r.setDesc(descriptions[i].text())
                 }else{
