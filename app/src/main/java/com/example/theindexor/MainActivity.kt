@@ -8,9 +8,11 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import com.example.theindexor.databinding.ActivityMainBinding
+import kotlinx.coroutines.NonCancellable.children
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
+import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
@@ -91,5 +93,19 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        try {
+            // clearing app data
+            val packageName = applicationContext.packageName
+            val runtime = Runtime.getRuntime()
+            runtime.exec("pm clear $packageName")
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 
 }

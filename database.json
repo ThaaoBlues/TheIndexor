@@ -58,7 +58,7 @@
       "french-stream.bet-film" : {
     
         "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : "a[href~=\"/film/\"]",
+        "title_css_selector" : ".title",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
         "content_url_css_selector" : "a",
@@ -71,7 +71,7 @@
       "french-stream.bet-serie" : {
     
         "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : ".tilte",
+        "title_css_selector" : "a[href~=\"/serie/\"]",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "NO SELECTOR",
         "content_url_css_selector" : "a",
