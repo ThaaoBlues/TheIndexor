@@ -89,7 +89,7 @@
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : "",
+        "content_url_scheme" : "/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
         "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
@@ -103,7 +103,7 @@
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : "img",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : "",
+        "content_url_scheme" : "/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
         "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
