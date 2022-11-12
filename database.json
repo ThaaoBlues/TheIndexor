@@ -82,20 +82,6 @@
   
       },
   
-      "moviesjoys.cc" : {
-    
-        "search_url" : "https://moviesjoys.cc/searchs/?s=%s",
-        "title_css_selector" : ".name",
-        "desc_css_selector" : "NO SELECTOR",
-        "minia_url_css_selector" : ".poster",
-        "content_url_css_selector" : ".name",
-        "content_url_scheme" : "/movie-watch/",
-        "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR",
-        "script" : "NO SELECTOR"
-
-  
-      },
       "soap2day.sh-serie" : {
     
         "search_url" : "https://soap2day.krd/search/keyword/%s",
