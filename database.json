@@ -55,61 +55,20 @@
   
     "film-series" : {
 
-      "french-stream.bet-film" : {
+      "azm.to-film" : {
     
-        "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : ".title",
+        "search_url" : "https://https://azm.to/search/%s",
+        "title_css_selector" : ".poster__title",
         "desc_css_selector" : "NO SELECTOR",
-        "minia_url_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : ".poster__img",
         "content_url_css_selector" : "a",
-        "content_url_scheme" : "https://french-stream.bet/film/",
+        "content_url_scheme" : "https://azm.to/movie/",
         "dl_css_selector" : "NO SELECTOR",
         "dl_url_scheme" : "NO SELECTOR",
-        "script" : "document.getElementsByClassName(\"cover\")[0].click();document.location.href = document.getElementsByTagName(\"iframe\")[0].src"
+        "script" : ""
   
       },
-      "french-stream.bet-serie" : {
-    
-        "search_url" : "https://french-stream.bet/?s=%s",
-        "title_css_selector" : "a[href~=\"/serie/\"]",
-        "desc_css_selector" : "NO SELECTOR",
-        "minia_url_css_selector" : "NO SELECTOR",
-        "content_url_css_selector" : "a",
-        "content_url_scheme" : "https://french-stream.bet/serie/",
-        "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR",
-        "script" : "document.getElementsByClassName(\"cover\")[0].click();window.location.href = document.getElementsByTagName(\"iframe\")[0].src"
-  
-      },
-  
-      "soap2day.sh-serie" : {
-    
-        "search_url" : "https://secretlink.xyz/search/keyword/%s",
-        "title_css_selector" : "a[href~=\".html\"]",
-        "desc_css_selector" : "NO SELECTOR",
-        "minia_url_css_selector" : "img",
-        "content_url_css_selector" : "a",
-        "content_url_scheme" : "/",
-        "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR",
-        "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
-
-  
-      },
-      "soap2day.sh-film" : {
-    
-        "search_url" : "https://secretlink.xyz/search/keyword/%s",
-        "title_css_selector" : "a[href~=\".html\"]",
-        "desc_css_selector" : "NO SELECTOR",
-        "minia_url_css_selector" : "img",
-        "content_url_css_selector" : "a",
-        "content_url_scheme" : "/",
-        "dl_css_selector" : "NO SELECTOR",
-        "dl_url_scheme" : "NO SELECTOR",
-        "script" : "window.location.href = \"https://soap2day.sh\" + document.location.pathname;"
-
-  
-      }
+      
 
 
 
