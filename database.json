@@ -57,7 +57,7 @@
 
       "azm.to-film" : {
     
-        "search_url" : "https://https://azm.to/search/%s",
+        "search_url" : "https://azm.to/search/%s",
         "title_css_selector" : ".poster__title",
         "desc_css_selector" : "NO SELECTOR",
         "minia_url_css_selector" : ".poster__img",
@@ -70,7 +70,6 @@
       },
 
       "tpb" : {
-
         
         "search_url" : "https://thepiratebay10.org/search/%s/1/99/200",
         "title_css_selector" : ".detName",
