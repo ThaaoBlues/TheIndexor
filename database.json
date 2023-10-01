@@ -89,6 +89,20 @@
     },
   
     "anime" : {
+
+      "tpb" : {
+        
+        "search_url" : "https://thepiratebay10.org/search/%s/1/99/200",
+        "title_css_selector" : ".detName",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "NO SELECTOR",
+        "content_url_css_selector" : ".detLink",
+        "content_url_scheme" : "https://thepiratebay10.org/torrent/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "script" : ""
+      }
+      
   
     },
   
@@ -174,12 +188,39 @@
         "script" : "NO SELECTOR"
 
   
+      },
+
+      "tpb" : {
+        
+        "search_url" : "https://thepiratebay10.org/search/%s/1/99/200",
+        "title_css_selector" : ".detName",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "NO SELECTOR",
+        "content_url_css_selector" : ".detLink",
+        "content_url_scheme" : "https://thepiratebay10.org/torrent/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "script" : ""
       }
 
 
 
     },
     "anime" : {
+
+      "tpb" : {
+        
+        "search_url" : "https://thepiratebay10.org/search/%s/1/99/200",
+        "title_css_selector" : ".detName",
+        "desc_css_selector" : "NO SELECTOR",
+        "minia_url_css_selector" : "NO SELECTOR",
+        "content_url_css_selector" : ".detLink",
+        "content_url_scheme" : "https://thepiratebay10.org/torrent/",
+        "dl_css_selector" : "NO SELECTOR",
+        "dl_url_scheme" : "NO SELECTOR",
+        "script" : ""
+      }
+      
   
     },
   
